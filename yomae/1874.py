@@ -25,13 +25,13 @@ def cal_push_pop(arr, stack, push_pop):
         else: # 만약에 스택의 TOP값이 입력된 수열의 i번째 값보다 작거나 크다면 입력된 수열과 같은 수를 만들어 낼 수가 없다.
               # TOP값이 큰 경우 : 입력한 수를 꺼내기 위해서 계속 pop을 해야됨 -> 그 수까지 가는동안 pop한 것들이 버려지므로 불가능
               # TOP값이 작은 경우 : ?? 이런 경우는 없는 것 같음 / 스택에 오름차순으로 들어가기 때문에
-            return 3 # 일종의 flag로 못 만들게 될 시 3을 리턴하고 끝내버림    
-    return 2 # 정상적으로 만들어졌다면 2를 리턴
+            return False # 못 만들게 될 시 False 리턴   
+    return True # 정상적으로 만들어졌다면 True 리턴
 
-if cal_push_pop(arr, stack, push_pop)==2:  
+if cal_push_pop(arr, stack, push_pop): # True
     for j in push_pop:
         print(j)
-else:
+else: # False
     print("NO")
 
 
