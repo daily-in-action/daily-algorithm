@@ -2,19 +2,12 @@
 
 N = int(input())
 ans = []
-result = 0
 
 for i in range(N):
     a = int(input())
     if a==0:
-        if len(ans)==0:
-            ans.append(a)
-        else:
-            ans.pop()
+        ans.pop()
     else:
         ans.append(a)
 
-for j in range(len(ans)):
-    result += ans[j]
-
-print(result)
+print(sum(ans)) # sum 함수 :  ans 리스트(정수) 원소들의 총합을 구해줌 
